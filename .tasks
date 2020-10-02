@@ -1,0 +1,15 @@
+[build]
+
+command=cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .. && make
+cwd=build
+output=terminal
+
+[test]
+
+command=valgrind --leak-check=full ./build/voxels
+output=terminal
+
+[run]
+
+command=./build/voxels
+output=terminal
